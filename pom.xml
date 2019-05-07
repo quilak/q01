@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+<!-- ====================================================================== -->
+<!-- PROPERTIES                                                             -->
+<!-- ====================================================================== -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Java version -->
+		<maven.compiler.source>1.12</maven.compiler.source>
+		<maven.compiler.target>1.12</maven.compiler.target>
+		
+		<!-- QUILAK version -->
+		<!-- BEWARE! use this property on [dependencies] ONLY
+		     		 for [artifact] versioning use maven versions plugin:
+		     		 	> mvn versions:set -DnewVersion=1.0.3 -->
+		<quilak.version>0.0.1-SNAPSHOT</quilak.version>
+		
+		<!-- Dependencies versions -->
+		<r01f.version>0.0.1-SNAPSHOT</r01f.version>
+	</properties>
+	
+<!-- ====================================================================== -->
+<!-- ARTIFACT                                                               -->
+<!-- ====================================================================== -->
+	<groupId>org.quilak</groupId>
+	<name>q01</name>
+	<artifactId>q01</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>				<!-- it's a parent project -->
+
+<!-- ====================================================================== -->
+<!-- MODULES                                                                -->
+<!-- ====================================================================== -->
+	<modules>
+		<module>q01API</module>
+		<module>q01CORE</module>
+	</modules>
+
+
+<!-- ====================================================================== -->
+<!-- DEPENDENCIES                                                           -->
+<!-- ====================================================================== -->
+	<dependencies>
+		<!-- ///////////////////////////////////////// -->
+		<!-- TEST                                      -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+			
+<!-- ====================================================================== -->
+<!-- PLUGINS                                                                -->
+<!-- ====================================================================== -->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Java compile -->
+				<!--
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.0</version> 
+					<configuration>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+					</configuration>
+				</plugin>
+				-->
+				<!-- Version plugin -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.7</version>
+				</plugin>
+				
+				<!-- Mav4en deploy: https://maven.apache.org/plugins/maven-deploy-plugin/usage.html -->
+                <plugin>
+                	<artifactId>maven-deploy-plugin</artifactId>
+                   	<version>3.0.0-M1</version>
+                   	<executions>
+                    	<execution>
+                        	<id>default-deploy</id>
+                         	<phase>deploy</phase>
+                        	<goals>
+                            	<goal>deploy-release</goal>
+                         	</goals>
+                      	</execution>
+                	</executions>
+                </plugin>
+                
+                <!-- Add the [resources] dir to the compile & package phase -->
+                <!-- https://www.mojohaus.org/build-helper-maven-plugin/usage.html -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+				  	<artifactId>build-helper-maven-plugin</artifactId>
+				  	<version>1.7</version>
+				  	<executions>
+				    	<execution>
+				      		<id>add-source</id>
+				      		<phase>generate-sources</phase>
+				      		<goals>
+				        		<goal>add-source</goal>
+				      		</goals>
+				      		<configuration>
+				        		<sources>
+				          			<source>src/main/resources</source>
+				          			<source>src/test/resources</source>
+				          			<source>src/main/config</source>
+				        		</sources>
+				      		</configuration>
+				    	</execution>
+				  	</executions>
+				</plugin>
+
+
+			</plugins>
+		</pluginManagement>
+	</build>	
+</project>

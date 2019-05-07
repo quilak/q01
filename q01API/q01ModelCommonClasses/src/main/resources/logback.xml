@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+
+	<property name="appName" value="q01f" />
+	
+	<jmxConfigurator contextName="q01f" />
+
+	<include resource="q01f/q01fEnvironment.xml"/>
+
+	<!-- Global -->
+	<include resource="r01fb/r01fbLogbackGlobal.xml"/>
+	<include resource="r01fb/r01fbLogback.xml"/>
+
+	<!-- Specific -->
+	<include resource="q01f/q01fLogback.xml"/>	
+	<include resource="q01a/q01aLogback.xml"/>
+	<include resource="q01c/q01cLogback.xml"/>
+
+</configuration>
