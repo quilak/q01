@@ -24,5 +24,7 @@
 <!-- MODULES                                                                -->
 <!-- ====================================================================== -->
 	<modules>
+    <module>q01CORCommonClasses</module>
+    <module>q01MainCOREClasses</module>
   </modules>
 </project>

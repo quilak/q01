@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+		xmlns="http://maven.apache.org/POM/4.0.0"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	
+<!-- ====================================================================== -->
+<!-- PARENT                                                                 -->
+<!-- ====================================================================== -->
+	<parent>
+		<groupId>org.quilak.core</groupId>
+		<artifactId>q01CORE</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+<!-- ====================================================================== -->
+<!-- ARTIFACT                                                               -->
+<!-- ====================================================================== -->
+	<name>q01CORECommonClasses</name>
+	<artifactId>q01CORECommonClasses</artifactId>
+	
+<!-- ====================================================================== -->
+<!-- DEPENDENCIES                                                           -->
+<!-- ====================================================================== -->
+	<dependencies>
+		<!-- ///////////////////////////////////////// -->
+		<!-- Quilak: Client                            -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>org.quilak.api</groupId>
+			<artifactId>q01ClientAPICommonClasses</artifactId>
+			<version>${quilak.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01: BusinessServices:DB                  -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.businessservices.core.persistence.db</groupId>
+			<artifactId>r01fBusinessServicesCoreDBPersistenceGuiceClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01: BusinessServices:Search              -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.businessservices.guice.core</groupId>
+			<artifactId>r01fBusinessServicesCoreSearchPersistenceGuiceClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>r01.r01f.businessservices.core.persistence.search</groupId>
+			<artifactId>r01fSearchDBClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01: BusinessServices:DB                  -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.businessservices.core.persistence.db</groupId>
+			<artifactId>r01fBusinessServicesCoreDBPersistenceGuiceClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+	</dependencies>
+</project>

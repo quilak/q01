@@ -1,0 +1,60 @@
+(see r01fbPersistenceClasses/src/r01f/services/persistence/CorePersistenceServicesBase.java)
+
+ There are 3 options for the [Persistence Unit] when using multi-tenants (see https://wiki.eclipse.org/EclipseLink/Examples/JPA/Multitenant)
+		NOTE:	[Persistence Unit]: 	The [EntityManagerFactory] + the cache							--> Injected at @PersistenceUnit
+				[Persistence Context]: 	The [EntityManager] created from the [EntityManagerFactory]		--> Injected at @PersistenceContext
+
+ [1] - Dedicated [Persistence Unit] per Tenant --> 	[Persistence Unit] per tenant (one persistence.xml file per tenant)
+													Each persistence.xml file MUST set the tenant-id using a property
+												  		<properties>
+															<property name="eclipselink.tenant-id" value="{tenantId}"/>
+															...
+														</properties>
+										  			The application MUST request/use the correct [Persistence Unit]
+
+ [2] - [Persistence Context] per Tenant 		--> There's a single [Persistence Unit] (a single persistence.xml file) for all tenants
+													... There is a SINGLE [EntityManagerFactory] / cache so when creating the
+														[Persistence Context] (the [EntityManager]) the tenantId MUST be set
+															Map<String,Object> emfProps = new HashMap<String,Object>();
+															emfProps.put("eclipselink.tenant-id",{tenantId});
+															entityManagerFactory.createEntityManager(emfProps);
+ 
+ [3] - [Persistence Unit] per Tenant			--> There's a single [Persistence Unit] (a single persistence.xml file) for all tenants
+													... Every application creates it's OWN [EntityManagerFactory / cache by using:
+															EntityManagerFactory emf = Persistence.createEntityManagerFactory();
+
+ The problem here is that there's NO way to use GUICE-Persist and the option [2] ([Persistence Context] / Tenant:
+		... although the EntityManagerFactory can be injected (a Provider<EntityManagerFactory> 
+			and a [Persistence Context] (an [EntityManager]) can be obtained for the correct tenant
+			the returned [EntityManager] is NOT binded to the transaction
+			... so the only option is to manually manage the transactions
+
+So, since the only solution using [guice-persist] to achieve multi-tenancy is to use the option [1] (dedicated [Persistent Unit] per Tenant),
+multiple modules must be used, each one with it's own META-INF/persistence.xml
+
+	- The only difference between each persistence.xml file is a property that sets the tenantId:
+				<persistence>
+						... 
+						<properties>
+							<property name="eclipselink.tenant-id" value="theTenantId"/>		    
+						</properties>
+				</persistence>
+				
+	- Each [tenant] will have it's own WAR module --> There're TWO WAR modules: [p01aPLATEAEEFFWar] and [p01aPLATEAWebWar]
+	
+	- Each WAR module will use the CORE logic at [p01bServicesClasses] as a dependency
+	  ... usually the META-INF/persistence.xml is at [p01bServicesClasses]/META-INF, BUT this time, since there're TWO persistence.xml files
+	      each persistence.xml will be located at each module:
+	      		[p01aPLATEAEEFFWar]				[p01aPLATEAWebWar]
+	      			META-INF							META-INF
+	      				persistence.xml						persistence.xml
+	  ... the [p01bServicesClasses] module WILL NOT contain a META-INF/persistence.xml file
+	      (maybe the [p01fTest] module will also have it's own META-INF/persistence.xml file)
+	
+	  
+	  
+	  
+	  
+	  
+	  
+	  

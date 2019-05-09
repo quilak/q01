@@ -25,5 +25,8 @@
 <!-- ====================================================================== -->
 	<modules>
     <module>q01ModelCommonClasses</module>
+    <module>q01ClientAPICommonClasses</module>
+    <module>q01MainModelClasses</module>
+    <module>q01MainClientAPIClasses</module>
   </modules>
 </project>

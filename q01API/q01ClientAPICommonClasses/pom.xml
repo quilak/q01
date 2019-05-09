@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+		xmlns="http://maven.apache.org/POM/4.0.0"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	
+<!-- ====================================================================== -->
+<!-- PARENT                                                                 -->
+<!-- ====================================================================== -->
+	<parent>
+		<groupId>org.quilak.api</groupId>
+		<artifactId>q01API</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
+<!-- ====================================================================== -->
+<!-- ARTIFACT                                                               -->
+<!-- ====================================================================== -->
+	<name>q01ClientAPICommonClasses</name>
+	<artifactId>q01ClientAPICommonClasses</artifactId>
+	
+<!-- ====================================================================== -->
+<!-- DEPENDENCIES                                                           -->
+<!-- ====================================================================== -->
+	<dependencies>
+		<!-- ///////////////////////////////////////// -->
+		<!-- Q01 Model                                 -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>org.quilak.api</groupId>
+			<artifactId>q01ModelCommonClasses</artifactId>
+			<version>${quilak.version}</version>
+		</dependency>
+
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01f: BusinessServices                    -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.businessservices.guice</groupId>
+			<artifactId>r01fBusinessServicesGuiceClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>r01.r01f.businessservices.guice.client</groupId>
+			<artifactId>r01fBusinessServicesClientGuice</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01f: FileStore                           -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.filestore</groupId>
+			<artifactId>r01fFileStoreClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01F: Base RxJava                         -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+		    <groupId>r01.r01f.base</groupId>
+		    <artifactId>r01fRXJavaClasses</artifactId>
+		    <version>${r01f.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01: Locale                               -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.locale</groupId>
+			<artifactId>r01fLocaleClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01: ObjectStreamer                       -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.objectstreamer</groupId>
+			<artifactId>r01fObjectStreamerClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- R01: Aspects                              -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.aspect.dirtytrack</groupId>
+			<artifactId>r01fDirtyTrackAspectClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>r01.r01f.aspect.freezable</groupId>
+			<artifactId>r01fFreezableAspectClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>r01.r01f.aspect.lazyload</groupId>
+			<artifactId>r01fLazyLoadAspectClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>r01.r01f.aspect.logging</groupId>
+			<artifactId>r01fLoggingAspectClasses</artifactId>
+			<version>${r01f.version}</version>
+		</dependency>
+	</dependencies>
+</project>

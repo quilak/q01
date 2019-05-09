@@ -16,7 +16,7 @@ public abstract class Q01CommonOIDs {
 /////////////////////////////////////////////////////////////////////////////////////////
 //  
 /////////////////////////////////////////////////////////////////////////////////////////
-	public static interface Q01ModelObjectOID
+	public static interface Q01PersistableObjectOID
 					extends OIDTyped<String>,
 							PersistableObjectOID,
 							SuppliesOID {
@@ -24,15 +24,15 @@ public abstract class Q01CommonOIDs {
 	}
 	@Immutable
 	@Accessors(prefix="_")
-	public static abstract class Q01ModelObjectOIDBase
+	public static abstract class Q01PersistableObjectOIDBase
 	              		 extends OIDBaseMutable<String> 	// normally this should extend OIDBaseInmutable BUT it MUST have a default no-args constructor to be serializable
-					  implements Q01ModelObjectOID {
+					  implements Q01PersistableObjectOID {
 		private static final long serialVersionUID = 7172918999884430100L;
 		
-		public Q01ModelObjectOIDBase() {
+		public Q01PersistableObjectOIDBase() {
 			// no args constructor
 		}
-		public Q01ModelObjectOIDBase(final String id) {
+		public Q01PersistableObjectOIDBase(final String id) {
 			super(id);
 		}
 		/**
