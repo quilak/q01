@@ -8,37 +8,28 @@
 <!-- PARENT                                                                 -->
 <!-- ====================================================================== -->
 	<parent>
-		<groupId>org.quilak.api</groupId>
-		<artifactId>q01API</artifactId>
+		<groupId>org.quilak.api.main</groupId>
+		<artifactId>q01MainAPI</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	
 <!-- ====================================================================== -->
 <!-- ARTIFACT                                                               -->
 <!-- ====================================================================== -->
-	<name>q01MainClientAPIClasses</name>
-	<artifactId>q01MainClientAPIClasses</artifactId>
+	<name>q01MainModelClasses</name>
+	<artifactId>q01MainModelClasses</artifactId>
 	
 <!-- ====================================================================== -->
 <!-- DEPENDENCIES                                                           -->
 <!-- ====================================================================== -->
 	<dependencies>
 		<!-- ///////////////////////////////////////// -->
-		<!-- Q01 Comon API                             -->
+		<!-- quilak: model                             -->
 		<!-- ///////////////////////////////////////// -->
 		<dependency>
 			<groupId>org.quilak.api</groupId>
-			<artifactId>q01ClientAPICommonClasses</artifactId>
+			<artifactId>q01ModelCommonClasses</artifactId>
 			<version>${quilak.version}</version>
 		</dependency>
-		<!-- ///////////////////////////////////////// -->
-		<!-- Q01 Main Model                            -->
-		<!-- ///////////////////////////////////////// -->
-		<dependency>
-			<groupId>org.quilak.api</groupId>
-			<artifactId>q01MainModelClasses</artifactId>
-			<version>${quilak.version}</version>
-		</dependency>
-
 	</dependencies>
 </project>

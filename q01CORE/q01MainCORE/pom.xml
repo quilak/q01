@@ -7,24 +7,23 @@
 <!-- PARENT                                                                 -->
 <!-- ====================================================================== -->
 	<parent>
-		<groupId>org.quilak</groupId>
-		<artifactId>q01</artifactId>
+		<groupId>org.quilak.core</groupId>
+		<artifactId>q01CORE</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	
 <!-- ====================================================================== -->
 <!-- ARTIFACT                                                               -->
 <!-- ====================================================================== -->
-	<groupId>org.quilak.core</groupId>
-	<name>q01CORE</name>
-	<artifactId>q01CORE</artifactId>
+	<groupId>org.quilak.core.main</groupId>
+	<name>q01MainCORE</name>
+	<artifactId>q01MainCORE</artifactId>
 	<packaging>pom</packaging>				<!-- it's a parent project -->
 	
 <!-- ====================================================================== -->
 <!-- MODULES                                                                -->
 <!-- ====================================================================== -->
 	<modules>
-    <module>q01CORCommonClasses</module>
-    <module>q01MainCORE</module>
+    <module>q01MainCOREClasses</module>
   </modules>
 </project>
