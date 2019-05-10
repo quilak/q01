@@ -40,5 +40,16 @@
 			<artifactId>q01CORECommonClasses</artifactId>
 			<version>${quilak.version}</version>
 		</dependency>
+		
+		
+		<!-- ///////////////////////////////////////// -->
+		<!-- TEST > R91: BusinessServices Test         -->
+		<!-- ///////////////////////////////////////// -->
+		<dependency>
+			<groupId>r01.r01f.businessservices</groupId>
+			<artifactId>r01fBusinessServicesTestClasses</artifactId>
+			<version>${r01f.version}</version>
+			<scope>test</scope>		<!-- TEST!!! -->
+		</dependency>
 	</dependencies>
 </project>

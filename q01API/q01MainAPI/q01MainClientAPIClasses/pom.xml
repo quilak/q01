@@ -39,6 +39,5 @@
 			<artifactId>q01MainModelClasses</artifactId>
 			<version>${quilak.version}</version>
 		</dependency>
-
 	</dependencies>
 </project>
