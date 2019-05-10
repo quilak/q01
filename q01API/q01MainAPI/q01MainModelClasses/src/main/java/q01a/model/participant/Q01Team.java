@@ -1,7 +1,7 @@
 package q01a.model.participant;
 
+import q01a.common.model.Q01PersistableObject;
 import q01a.model.oids.Q01MainOIDs.Q01TeamOID;
-import q01f.common.model.Q01PersistableObject;
 import r01f.locale.LanguageTexts;
 
 public interface Q01Team

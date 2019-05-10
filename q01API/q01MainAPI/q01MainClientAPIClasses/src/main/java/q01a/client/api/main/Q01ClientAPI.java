@@ -21,7 +21,7 @@ import q01a.client.api.delegates.participant.Q01ClientAPIDelegateForPersonCRUDSe
 import q01a.client.api.delegates.participant.Q01ClientAPIDelegateForPersonFindServices;
 import q01a.client.api.delegates.participant.Q01ClientAPIDelegateForTeamCRUDServices;
 import q01a.client.api.delegates.participant.Q01ClientAPIDelegateForTeamFindServices;
-import q01f.common.internal.Q01AppCodes;
+import q01a.common.internal.Q01AppCodes;
 import r01f.model.annotations.ModelObjectsMarshaller;
 import r01f.objectstreamer.Marshaller;
 import r01f.securitycontext.SecurityContext;

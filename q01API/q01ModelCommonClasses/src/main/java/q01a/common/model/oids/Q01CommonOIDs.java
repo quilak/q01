@@ -1,4 +1,4 @@
-package q01f.common.model.oids;
+package q01a.common.model.oids;
 
 import java.util.UUID;
 

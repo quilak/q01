@@ -3,8 +3,8 @@ package q01c.services.delegates.crud;
 import com.google.common.eventbus.EventBus;
 
 import q01a.api.interfaces.crud.Q01CRUDServicesForPersistableModelObjectBase;
-import q01f.common.model.Q01PersistableObject;
-import q01f.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
+import q01a.common.model.Q01PersistableObject;
+import q01a.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
 import r01f.bootstrap.services.config.core.ServicesCoreBootstrapConfigWhenBeanExposed;
 import r01f.model.persistence.PersistenceRequestedOperation;
 import r01f.persistence.db.DBCRUDForModelObject;

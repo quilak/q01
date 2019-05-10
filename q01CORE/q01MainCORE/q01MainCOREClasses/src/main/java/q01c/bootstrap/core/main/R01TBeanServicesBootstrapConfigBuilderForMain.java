@@ -2,8 +2,8 @@ package q01c.bootstrap.core.main;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import q01a.common.internal.Q01AppCodes;
 import q01c.services.impl.Q01CoreServiceImpl;
-import q01f.common.internal.Q01AppCodes;
 import r01f.bootstrap.services.config.core.ServicesCoreBootstrapConfigBuilder;
 import r01f.bootstrap.services.config.core.ServicesCoreBootstrapConfigWhenBeanExposed;
 import r01f.bootstrap.services.config.core.ServicesCoreSubModuleBootstrapConfig;

@@ -1,4 +1,4 @@
-package q01f.common.internal;
+package q01a.common.internal;
 
 import r01f.services.ids.ServiceIDs.ClientApiAppCode;
 import r01f.services.ids.ServiceIDs.CoreAppCode;

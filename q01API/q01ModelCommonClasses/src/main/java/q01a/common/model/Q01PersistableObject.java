@@ -1,6 +1,6 @@
-package q01f.common.model;
+package q01a.common.model;
 
-import q01f.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
+import q01a.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
 import r01f.model.IndexableModelObject;
 import r01f.model.PersistableModelObject;
 import r01f.validation.Validates;

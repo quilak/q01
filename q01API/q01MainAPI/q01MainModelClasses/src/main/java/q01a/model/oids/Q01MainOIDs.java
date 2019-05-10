@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.Accessors;
-import q01f.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOIDBase;
+import q01a.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOIDBase;
 import r01f.annotations.Immutable;
 import r01f.objectstreamer.annotations.MarshallType;
 

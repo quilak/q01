@@ -1,7 +1,7 @@
 package q01a.model.participant;
 
+import q01a.common.model.Q01PersistableObjectBase;
 import q01a.model.oids.Q01MainOIDs.Q01TeamOID;
-import q01f.common.model.Q01PersistableObjectBase;
 import r01f.aspects.interfaces.dirtytrack.ConvertToDirtyStateTrackable;
 
 @ConvertToDirtyStateTrackable

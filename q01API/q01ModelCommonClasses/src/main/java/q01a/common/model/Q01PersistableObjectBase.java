@@ -1,12 +1,12 @@
-package q01f.common.model;
+package q01a.common.model;
 
 
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
-import q01f.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
-import q01f.common.validators.Q01CommonValidators;
+import q01a.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
+import q01a.common.validators.Q01CommonValidators;
 import r01f.aspects.interfaces.dirtytrack.ConvertToDirtyStateTrackable;
 import r01f.locale.LanguageTexts;
 import r01f.model.PersistableModelObjectBase;

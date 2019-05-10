@@ -1,4 +1,4 @@
-package q01f.common.model;
+package q01a.common.model;
 
 import r01f.model.ModelObject;
 

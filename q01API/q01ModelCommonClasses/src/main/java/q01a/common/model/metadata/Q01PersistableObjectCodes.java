@@ -1,4 +1,4 @@
-package q01f.common.model.metadata;
+package q01a.common.model.metadata;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

@@ -3,8 +3,8 @@ package q01c.db.find;
 import javax.persistence.EntityManager;
 
 import q01a.api.interfaces.find.Q01FindServicesForPersistableModelObjectBase;
-import q01f.common.model.Q01PersistableObject;
-import q01f.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
+import q01a.common.model.Q01PersistableObject;
+import q01a.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
 import r01f.objectstreamer.Marshaller;
 import r01f.persistence.db.DBFindForModelObjectBase;
 import r01f.persistence.db.config.DBModuleConfig;

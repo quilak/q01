@@ -1,8 +1,8 @@
-package q01f.common.validators;
+package q01a.common.validators;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import q01f.common.model.Q01PersistableObjectBase;
+import q01a.common.model.Q01PersistableObjectBase;
 import r01f.validation.ObjectValidationResult;
 import r01f.validation.ObjectValidationResultBuilder;
 import r01f.validation.Validates;

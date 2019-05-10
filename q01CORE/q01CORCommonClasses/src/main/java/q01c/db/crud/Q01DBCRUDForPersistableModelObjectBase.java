@@ -3,9 +3,9 @@ package q01c.db.crud;
 import javax.persistence.EntityManager;
 
 import q01a.api.interfaces.crud.Q01CRUDServicesForPersistableModelObjectBase;
+import q01a.common.model.Q01PersistableObject;
+import q01a.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
 import q01c.db.entities.Q01DBEntityBase;
-import q01f.common.model.Q01PersistableObject;
-import q01f.common.model.oids.Q01CommonOIDs.Q01PersistableObjectOID;
 import r01f.objectstreamer.Marshaller;
 import r01f.persistence.db.CompletesDBEntityBeforeCreateOrUpdate;
 import r01f.persistence.db.DBCRUDForModelObjectBase;

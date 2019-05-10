@@ -3,11 +3,11 @@ package q01a.model.event;
 import java.util.Date;
 import java.util.Set;
 
+import q01a.common.model.Q01PersistableObject;
 import q01a.model.oids.Q01MainOIDs.Q01EventOID;
 import q01a.model.oids.Q01MainOIDs.Q01LocationOID;
 import q01a.model.participant.Q01EventParticipant;
 import q01a.model.sport.Q01Sport;
-import q01f.common.model.Q01PersistableObject;
 
 public interface Q01Event 
 	     extends Q01PersistableObject<Q01EventOID> {
